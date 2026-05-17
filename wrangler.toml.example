@@ -1,0 +1,22 @@
+name = "amc-tracker"
+main = "src/index.ts"
+compatibility_date = "2025-05-01"
+
+# Keep the *.workers.dev URL enabled so you can manually trigger a tick
+# with `curl https://<worker>.workers.dev/`. Preview URLs are off — we
+# don't use preview deployments.
+workers_dev = true
+preview_urls = false
+
+# Run the scheduled handler every 5 minutes.
+[triggers]
+crons = ["*/5 * * * *"]
+
+# KV namespace stores per-showtime watchlist entries and alerted-seat state.
+# `bun run setup` creates the namespace and patches this file with the id.
+[[kv_namespaces]]
+binding = "AMC_TRACKER"
+id = "REPLACE_WITH_KV_NAMESPACE_ID"
+
+[observability]
+logs = { enabled = true, invocation_logs = true }

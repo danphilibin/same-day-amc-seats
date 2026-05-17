@@ -1,0 +1,3 @@
+# Copy this to .dev.vars for local `wrangler dev` runs.
+# In production, set with: bun wrangler secret put BRRR_WEBHOOK_URL
+BRRR_WEBHOOK_URL=https://api.brrr.now/v1/br_usr_xxxxxxxxxxxxxxxxxxxx

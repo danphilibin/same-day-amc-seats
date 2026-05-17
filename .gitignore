@@ -1,0 +1,9 @@
+node_modules
+.dev.vars
+.wrangler
+.DS_Store
+worker-configuration.d.ts
+
+# wrangler.toml is generated locally by `bun run setup`; the committed
+# template is wrangler.toml.example. Don't commit your personal copy.
+wrangler.toml

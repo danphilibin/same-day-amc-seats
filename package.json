@@ -1,0 +1,23 @@
+{
+  "name": "asame-day-amc-seats",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "setup": "bun run src/setup.ts",
+    "reset": "bun run src/reset.ts",
+    "pick": "bun run src/pick.ts",
+    "watchlist": "bun run src/watchlist.ts",
+    "unwatch": "bun run src/unwatch.ts",
+    "list": "bun run src/list.ts",
+    "check": "bun run src/check.ts",
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "tail": "wrangler tail"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20251101.0",
+    "@types/bun": "^1.3.14",
+    "typescript": "^5.6.0",
+    "wrangler": "^4.0.0"
+  }
+}
